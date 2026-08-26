@@ -804,3 +804,39 @@ body.dark-mode .paw3 {
 body.dark-mode .section-title span {
     color: #b879ff !important;
 }
+    
+/* 🐾✨ АНИМАЦИЯ КАРТОЧЕК КОТИКОВ */
+
+.cat-card {
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.cat-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 15px 35px rgba(155, 99, 230, 0.25);
+}
+
+/* 🌙 То же самое красиво работает ночью */
+body.dark-mode .cat-card:hover {
+    box-shadow:
+        0 15px 35px rgba(155, 99, 230, 0.35),
+        0 0 25px rgba(184, 121, 255, 0.12);
+}
+    /* ❤️✨ ЖИВЫЕ СЕРДЕЧКИ */
+
+.heart {
+    transition:
+        transform 0.25s ease,
+        filter 0.25s ease;
+}
+
+.heart:hover {
+    transform: scale(1.2);
+    filter: drop-shadow(0 0 8px rgba(255, 150, 200, 0.6));
+}
+
+.heart.liked {
+    transform: scale(1.15);
+}
