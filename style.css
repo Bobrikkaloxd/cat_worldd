@@ -13,7 +13,6 @@ body {
     color: #493843;
 }
 
-
 /* NAVIGATION */
 
 .navbar {
@@ -748,4 +747,26 @@ body.dark-mode .theme-button {
 
 body.dark-mode .details-button:hover {
     background: #b879ff !important;
+}
+/* 🌙💜 ОСТАВШИЕСЯ РОЗОВЫЕ АКЦЕНТЫ */
+
+body.dark-mode .hero-cats {
+    border-color: #9b63e6;
+}
+
+body.dark-mode .paw2 {
+    color: #b879ff;
+}
+
+body.dark-mode .section-title span {
+    color: #b879ff;
+}
+
+body.dark-mode #result {
+    color: #c58aff;
+}
+
+body.dark-mode .heart.liked {
+    background: #4a3268;
+    color: #d8a8ff;
 }
