@@ -719,3 +719,32 @@ body.dark-mode .theme-button {
     background: #34284a !important;
     border: 2px solid #9b63e6;
 }
+.details-button {
+    display: inline-block;
+    padding: 11px 22px;
+
+    border: none;
+    border-radius: 14px;
+
+    background: #f3d9e5;
+    color: #8f4f68;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.25s ease;
+}
+    
+.details-button:hover {
+    transform: translateY(-2px);
+} body.dark-mode .details-button {
+    background: #9b63e6 !important;
+    color: #ffffff !important;
+    border: 2px solid #b879ff !important;
+}
+
+body.dark-mode .details-button:hover {
+    background: #b879ff !important;
+}
