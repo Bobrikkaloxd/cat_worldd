@@ -517,4 +517,22 @@ to {
     background: #ffd6e2;
     color: #f17891;
     transform: scale(1.15);
+}.theme-button {
+    width: 42px;
+    height: 42px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #f4e9ff;
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+}
+
+.theme-button:hover {
+    transform: rotate(15deg) scale(1.08);
 }
