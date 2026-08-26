@@ -532,7 +532,6 @@ to {
 
     transition: 0.25s;
 }
-
 .theme-button:hover {
     transform: rotate(15deg) scale(1.08);
 }
