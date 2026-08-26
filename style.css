@@ -536,3 +536,95 @@ to {
 .theme-button:hover {
     transform: rotate(15deg) scale(1.08);
 }
+body {
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+body.dark-mode {
+    background-color: #171323;
+    color: #eee8ff;
+}
+
+body.dark-mode .navbar {
+    background-color: #211a32;
+}
+
+body.dark-mode .navbar a {
+    color: #eee8ff;
+}
+
+body.dark-mode .hero {
+    background-color: #171323;
+}
+
+body.dark-mode .hero-text h1 {
+    color: #eee8ff;
+}
+
+body.dark-mode .hero-text p {
+    color: #c9c0dc;
+}
+
+body.dark-mode .cats-section {
+    background-color: #1d1729;
+}
+
+body.dark-mode .section-title h2 {
+    color: #eee8ff;
+}
+
+body.dark-mode .section-subtitle {
+    color: #c9c0dc;
+}
+
+body.dark-mode .cat-card {
+    background-color: #29213a;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+body.dark-mode .cat-card h3 {
+    color: #eee8ff;
+}
+
+body.dark-mode .cat-card p {
+    color: #c9c0dc;
+}
+
+body.dark-mode .features {
+    background-color: #171323;
+}
+
+body.dark-mode .feature {
+    background-color: #29213a;
+}
+
+body.dark-mode .feature h3 {
+    color: #eee8ff;
+}
+
+body.dark-mode .feature p {
+    color: #c9c0dc;
+}
+
+body.dark-mode footer {
+    background-color: #110d19;
+    color: #c9c0dc;
+}
+
+body.dark-mode .modal-content {
+    background-color: #29213a;
+    color: #eee8ff;
+}
+
+body.dark-mode .modal-text p {
+    color: #c9c0dc;
+}
+
+body.dark-mode .theme-button {
+    background-color: #34284a;
+}
+
+body.dark-mode .second-button {
+    background-color: #34284a;
+    color: #eee8ff;
+}
