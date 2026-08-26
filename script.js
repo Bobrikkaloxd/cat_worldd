@@ -121,3 +121,28 @@ themeToggle.addEventListener("click", function () {
     }
 
 });
+
+// 🐾 СЕКРЕТНАЯ ПАСХАЛКА
+const easterEgg = document.getElementById("easterEgg");
+const closeEasterEgg = document.getElementById("closeEasterEgg");
+
+let easterClicks = 0;
+
+const logo = document.querySelector(".logo");
+
+if (logo && easterEgg) {
+    logo.addEventListener("click", function () {
+        easterClicks++;
+
+        if (easterClicks >= 7) {
+            easterEgg.classList.add("show");
+            easterClicks = 0;
+        }
+    });
+}
+
+if (closeEasterEgg && easterEgg) {
+    closeEasterEgg.addEventListener("click", function () {
+        easterEgg.classList.remove("show");
+    });
+}
