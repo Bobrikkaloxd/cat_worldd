@@ -1,204 +1,351 @@
-<title>Котополис 🐾</title>
+<!DOCTYPE html>
+<html lang="ru">
 
-<link rel="stylesheet" href="style.css"><nav>
-    <a href="#home">Главная</a>
-    <a href="#cats">Котики</a>
-    <a href="#about">О нас</a>
-</nav><div class="hero-text">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <span class="little-title">🐾 ДОБРО ПОЖАЛОВАТЬ 🐾</span>
+    <title>Котополис 🐾</title>
 
-    <h1>
-        Добро пожаловать<br>
-        в <span>Котополис!</span> ❤️
-    </h1>
+    <link rel="stylesheet" href="style.css">
+</head>
 
-    <p>
-        Уютный уголок интернета, посвящённый
-        трём самым особенным котикам —
-        Гордюше, Симбе и Филе.
+<body>
+
+<header class="navbar">
+
+    <div class="logo">
+        🐾 <span>Котополис</span>
+    </div>
+
+    <nav>
+        <a href="#home">Главная</a>
+        <a href="#cats">Котики</a>
+        <a href="#about">О нас</a>
+
+        <button id="themeToggle" class="theme-button">🌙</button>
+    </nav>
+
+</header>
+
+
+<main>
+
+<section class="hero" id="home">
+
+    <div class="hero-text">
+
+        <span class="little-title">
+            🐾 ДОБРО ПОЖАЛОВАТЬ 🐾
+        </span>
+
+        <h1>
+            Добро пожаловать<br>
+            в <span>Котополис!</span> ❤️
+        </h1>
+
+        <p>
+            Уютный уголок интернета, посвящённый
+            трём самым особенным котикам —
+            Гордюше, Симбе и Филе.
+        </p>
+
+        <div class="buttons">
+
+            <a href="#cats" class="main-button">
+                🐾 Познакомиться с котиками
+            </a>
+
+            <button id="randomCat" class="second-button">
+                🎲 Случайный котик
+            </button>
+
+        </div>
+
+        <p id="result"></p>
+
+    </div>
+
+
+    <div class="hero-decoration">
+
+        <div class="paw paw1">🐾</div>
+        <div class="paw paw2">♡</div>
+        <div class="paw paw3">✦</div>
+
+        <div class="hero-cats">
+
+            <img src="gordyusha.jpg" alt="Гордюша">
+            <img src="simba.jpg" alt="Симба">
+            <img src="filia.jpg" alt="Филя">
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="cats-section" id="cats">
+
+    <div class="section-title">
+        <span>🐾</span>
+        <h2>Наши котики</h2>
+        <span>🐾</span>
+    </div>
+
+    <p class="section-subtitle">
+        Три котика — три совершенно разные личности ❤️
     </p>
 
-    <div class="buttons">
-        <a href="#cats" class="main-button">
-            🐾 Познакомиться с котиками
-        </a>
 
-        <button id="randomCat" class="second-button">
-            🎲 Случайный котик
-        </button>
-    </div>
-
-    <p id="result"></p>
-
-</div>
-
-<div class="hero-decoration">
-    <div class="paw paw1">🐾</div>
-    <div class="paw paw2">♡</div>
-    <div class="paw paw3">✦</div>
-
-    <div class="hero-cats">
-        <img src="gordyusha.jpg" alt="Гордюша">
-        <img src="simba.jpg" alt="Симба">
-        <img src="filia.jpg" alt="Филя">
-    </div>
-</div><div class="section-title">
-    <span>🐾</span>
-    <h2>Наши котики</h2>
-    <span>🐾</span>
-</div>
-
-<p class="section-subtitle">
-    Три котика — три совершенно разные личности ❤️
-</p>
+    <div class="cats">
 
 
-<div class="cats">
+        <article class="cat-card">
 
-    <article class="cat-card">
+            <div class="photo-container">
 
-        <div class="photo-container">
-            <img src="gordyusha.jpg" alt="Гордюша">
-            <span class="name-tag purple">Гордюша</span>
-            <button class="heart">♡</button>
-        </div>
+                <img src="gordyusha.jpg" alt="Гордюша">
 
-        <div class="card-content">
+                <span class="name-tag purple">
+                    Гордюша
+                </span>
 
-            <h3>Гордюша 🩶</h3>
+                <button class="heart">♡</button>
 
-            <p>
-                Главный пушистый житель Котополиса.
-                Любит уют, внимание и хорошие места
-                для сна.
-            </p>
-
-            <button class="details-button purple-button">
-                🐾 Подробнее
-            </button>
-
-        </div>
-
-    </article>
-
-
-    <article class="cat-card">
-
-        <div class="photo-container">
-            <img src="simba.jpg" alt="Симба">
-            <span class="name-tag orange">Симба</span>
-            <button class="heart">♡</button>
-        </div>
-
-        <div class="card-content">
-
-            <h3>Симба 🧡</h3>
-
-            <p>
-                Рыжий непоседа и любитель приключений.
-                Навсегда оставивший своё место
-                в нашем сердце.
-            </p>
-
-            <button class="details-button orange-button">
-                🐾 Подробнее
-            </button>
-
-        </div>
-
-    </article>
-
-
-    <article class="cat-card">
-
-        <div class="photo-container">
-            <img src="filia.jpg" alt="Филя">
-            <span class="name-tag blue">Филя</span>
-            <button class="heart">♡</button>
-        </div>
-
-        <div class="card-content">
-
-            <h3>Филя 🖤</h3>
-
-            <p>
-                Немного загадочный, очень красивый
-                и внимательный кот с невероятными
-                глазами.
-            </p>
-
-            <button class="details-button blue-button">
-                🐾 Подробнее
-            </button>
-
-        </div>
-
-    </article>
-
-</div><div class="feature">
-    <div class="feature-icon">❤️</div>
-    <div>
-        <h3>Сделано с любовью</h3>
-        <p>Этот сайт создан с большой любовью к нашим котикам.</p>
-    </div>
-</div>
-
-<div class="feature">
-    <div class="feature-icon">✨</div>
-    <div>
-        <h3>Для хорошего настроения</h3>
-        <p>Здесь можно просто улыбнуться и немного отдохнуть.</p>
-    </div>
-</div>
-
-<div class="feature">
-    <div class="feature-icon">⭐</div>
-    <div>
-        <h3>Уникальные личности</h3>
-        <p>У каждого котика свой характер и своя история.</p>
-    </div>
-</div>
-
-<div class="feature">
-    <div class="feature-icon">📷</div>
-    <div>
-        <h3>Много милых фото</h3>
-        <p>И это только начало Котополиса!</p>
-    </div>
-</div><div>
-    <b>🐾 Котополис</b>
-    <p>Мир наших котиков ❤️</p>
-</div>
-
-<div class="footer-paws">
-    🐾 🐾 🐾
-</div>
-
-<div>
-    <p>Сделано для Гордюши, Симбы, Фили и остальных 🐱</p>
-</div>
-        </div>
-    </footer>
-
-    <div id="catModal" class="modal">
-
-        <div class="modal-content">
-
-            <button id="closeModal" class="close-modal">×</button>
-
-            <img id="modalImage" src="" alt="Котик">
-
-            <div class="modal-text">
-                <h2 id="modalName"></h2>
-                <p id="modalDescription"></p>
             </div>
 
+            <div class="card-content">
+
+                <h3>Гордюша 🩶</h3>
+
+                <p>
+                    Главный пушистый житель Котополиса.
+                    Любит уют, внимание и хорошие места
+                    для сна.
+                </p>
+
+                <button class="details-button purple-button">
+                    🐾 Подробнее
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <article class="cat-card">
+
+            <div class="photo-container">
+
+                <img src="simba.jpg" alt="Симба">
+
+                <span class="name-tag orange">
+                    Симба
+                </span>
+
+                <button class="heart">♡</button>
+
+            </div>
+
+            <div class="card-content">
+
+                <h3>Симба 🧡</h3>
+
+                <p>
+                    Рыжий непоседа и любитель приключений.
+                    Особенный котик, который навсегда
+                    останется частью нашей истории.
+                </p>
+
+                <button class="details-button orange-button">
+                    🐾 Подробнее
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <article class="cat-card">
+
+            <div class="photo-container">
+
+                <img src="filia.jpg" alt="Филя">
+
+                <span class="name-tag blue">
+                    Филя
+                </span>
+
+                <button class="heart">♡</button>
+
+            </div>
+
+            <div class="card-content">
+
+                <h3>Филя 🖤</h3>
+
+                <p>
+                    Немного загадочный, очень красивый
+                    и внимательный кот с невероятными
+                    глазами.
+                </p>
+
+                <button class="details-button blue-button">
+                    🐾 Подробнее
+                </button>
+
+            </div>
+
+        </article>
+
+
+    </div>
+
+</section>
+
+
+<section class="features" id="about">
+
+
+    <div class="feature">
+
+        <div class="feature-icon">
+            ❤️
+        </div>
+
+        <div>
+
+            <h3>Сделано с любовью</h3>
+
+            <p>
+                Этот сайт создан с большой любовью
+                к нашим котикам.
+            </p>
+
         </div>
 
     </div>
 
-    <script src="script.js"></script>
+
+    <div class="feature">
+
+        <div class="feature-icon">
+            ✨
+        </div>
+
+        <div>
+
+            <h3>Для хорошего настроения</h3>
+
+            <p>
+                Здесь можно просто улыбнуться
+                и немного отдохнуть.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="feature">
+
+        <div class="feature-icon">
+            ⭐
+        </div>
+
+        <div>
+
+            <h3>Уникальные личности</h3>
+
+            <p>
+                У каждого котика свой характер
+                и своя история.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="feature">
+
+        <div class="feature-icon">
+            📷
+        </div>
+
+        <div>
+
+            <h3>Много милых фото</h3>
+
+            <p>
+                И это только начало Котополиса!
+            </p>
+
+        </div>
+
+    </div>
+
+
+</section>
+
+</main>
+
+
+<footer>
+
+    <div>
+
+        <b>🐾 Котополис</b>
+
+        <p>
+            Мир наших котиков ❤️
+        </p>
+
+    </div>
+
+
+    <div class="footer-paws">
+        🐾 🐾 🐾
+    </div>
+
+
+    <div>
+
+        <p>
+            Сделано для Гордюши, Симбы и Фили 🐱
+        </p>
+
+    </div>
+
+</footer>
+
+
+<div id="catModal" class="modal">
+
+    <div class="modal-content">
+
+        <button id="closeModal" class="close-modal">
+            ×
+        </button>
+
+        <img id="modalImage" src="" alt="Котик">
+
+        <div class="modal-text">
+
+            <h2 id="modalName"></h2>
+
+            <p id="modalDescription"></p>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script src="script.js"></script>
 
 </body>
 </html>
