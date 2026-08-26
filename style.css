@@ -689,6 +689,7 @@ body.dark-mode .logo {
 body.dark-mode .logo span {
     color: #c58aff;
 }
+    
 /* 💜 КНОПКИ "ПОДРОБНЕЕ" В НОЧНОМ РЕЖИМЕ */
 
 body.dark-mode .details-button {
@@ -702,7 +703,6 @@ body.dark-mode .details-button:hover {
     background: #b879ff !important;
     transform: translateY(-2px);
 }
-
 
 /* ✨ ИКОНКИ В НОЧНОМ РЕЖИМЕ */
 
