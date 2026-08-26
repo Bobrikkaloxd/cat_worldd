@@ -771,3 +771,36 @@ body.dark-mode .heart.liked {
     background: #4a3268;
     color: #d8a8ff;
 }
+/* 🌙💜 ФИНАЛЬНАЯ ЦВЕТОВАЯ СХЕМА НОЧНОГО КОТОПОЛИСА */
+
+body.dark-mode .hero {
+    background:
+        radial-gradient(circle at 20% 20%, #35254f, transparent 25%),
+        radial-gradient(circle at 90% 70%, #40285f, transparent 30%),
+        #171323 !important;
+}
+
+body.dark-mode .hero-text .little-title {
+    color: #c58aff !important;
+}
+
+body.dark-mode .hero-text h1 span {
+    color: #b879ff !important;
+}
+
+body.dark-mode .hero-cats {
+    border-color: #9b63e6 !important;
+    background: #34284a !important;
+}
+
+body.dark-mode .paw2 {
+    color: #d09aff !important;
+}
+
+body.dark-mode .paw3 {
+    color: #b879ff !important;
+}
+
+body.dark-mode .section-title span {
+    color: #b879ff !important;
+}
