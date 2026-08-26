@@ -513,3 +513,8 @@ to {
 .modal-text {
     padding: 20px;
 }}
+.heart.liked {
+    background: #ffd6e2;
+    color: #f17891;
+    transform: scale(1.15);
+}
