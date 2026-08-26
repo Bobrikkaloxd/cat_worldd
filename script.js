@@ -146,3 +146,122 @@ if (closeEasterEgg && easterEgg) {
         easterEgg.classList.remove("show");
     });
 }
+// 🐾 СЕКРЕТНАЯ ПАСХАЛКА
+(function () {
+    const logo = document.getElementById("secretLogo");
+
+    if (!logo) return;
+
+    let clicks = 0;
+    let timer;
+
+    logo.style.cursor = "pointer";
+
+    logo.addEventListener("click", function () {
+        clicks++;
+
+        clearTimeout(timer);
+
+        // Если между кликами прошло слишком много времени — начинаем сначала
+        timer = setTimeout(function () {
+            clicks = 0;
+        }, 2000);
+
+        if (clicks === 7) {
+            clicks = 0;
+            showSecretEasterEgg();
+        }
+    });
+
+    function showSecretEasterEgg() {
+        // Если пасхалка уже открыта — ничего не делаем
+        if (document.getElementById("secretEasterEgg")) return;
+
+        const overlay = document.createElement("div");
+        overlay.id = "secretEasterEgg";
+
+        overlay.style.cssText = `
+            position: fixed;
+            inset: 0;
+            z-index: 99999;
+            background: rgba(20, 10, 35, 0.88);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 25px;
+            box-sizing: border-box;
+        `;
+
+        overlay.innerHTML = `
+            <div style="
+                position: relative;
+                max-width: 850px;
+                width: 100%;
+                background: #fff;
+                border-radius: 28px;
+                padding: 18px;
+                box-sizing: border-box;
+                text-align: center;
+                box-shadow: 0 20px 80px rgba(0,0,0,0.5);
+            ">
+                <button id="closeSecretEasterEgg" style="
+                    position: absolute;
+                    right: 14px;
+                    top: 12px;
+                    width: 38px;
+                    height: 38px;
+                    border: none;
+                    border-radius: 50%;
+                    background: #9b63e6;
+                    color: white;
+                    font-size: 22px;
+                    cursor: pointer;
+                    z-index: 2;
+                ">×</button>
+
+                <div style="
+                    font-size: 22px;
+                    font-weight: bold;
+                    color: #8b55d9;
+                    margin: 8px 45px 14px;
+                ">
+                    ✨ Секретная пасхалка ✨
+                </div>
+
+                <img
+                    src="easter-egg.jpg"
+                    alt="Секретная пасхалка"
+                    style="
+                        display: block;
+                        width: 100%;
+                        max-height: 70vh;
+                        object-fit: contain;
+                        border-radius: 20px;
+                    "
+                >
+
+                <div style="
+                    margin-top: 12px;
+                    font-size: 16px;
+                    color: #555;
+                ">
+                    🐾 Ты нашёл секрет Котополиса! ❤️
+                </div>
+            </div>
+        `;
+
+        document.body.appendChild(overlay);
+
+        document
+            .getElementById("closeSecretEasterEgg")
+            .addEventListener("click", function () {
+                overlay.remove();
+            });
+
+        overlay.addEventListener("click", function (event) {
+            if (event.target === overlay) {
+                overlay.remove();
+            }
+        });
+    }
+})();
