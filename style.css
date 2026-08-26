@@ -962,3 +962,12 @@ body.dark-mode .modal-text p {
 .easter-egg.show {
     display: flex;
 }
+
+/* Фикс фотографий котиков */
+.feature-card img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
