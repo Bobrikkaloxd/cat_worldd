@@ -32,3 +32,17 @@ modal.addEventListener("click", function (event) {
 if (event.target === modal) {
     modal.classList.remove("show");
 }});
+// ❤️ ЛЮБИМЫЕ КОТИКИ
+const hearts = document.querySelectorAll(".heart");
+hearts.forEach(function (heart) {
+heart.addEventListener("click", function () {
+
+    heart.classList.toggle("liked");
+
+    if (heart.classList.contains("liked")) {
+        heart.textContent = "♥";
+    } else {
+        heart.textContent = "♡";
+    }
+
+});});
