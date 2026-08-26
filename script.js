@@ -46,6 +46,7 @@ heart.addEventListener("click", function () {
     }
 
 });});
+
 // 🌙 НОЧНОЙ РЕЖИМ
 
 const themeToggle = document.getElementById("themeToggle");
