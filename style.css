@@ -689,3 +689,33 @@ body.dark-mode .logo {
 body.dark-mode .logo span {
     color: #c58aff;
 }
+/* 💜 КНОПКИ "ПОДРОБНЕЕ" В НОЧНОМ РЕЖИМЕ */
+
+body.dark-mode .details-button {
+    background: #9b63e6 !important;
+    color: #ffffff !important;
+    border: 2px solid #b879ff !important;
+    border-radius: 14px !important;
+}
+
+body.dark-mode .details-button:hover {
+    background: #b879ff !important;
+    transform: translateY(-2px);
+}
+
+
+/* ✨ ИКОНКИ В НОЧНОМ РЕЖИМЕ */
+
+body.dark-mode .feature-icon {
+    background: #34284a;
+    border-radius: 50%;
+    color: #d09aff;
+}
+body.dark-mode .second-button {
+    border-color: #b879ff !important;
+}
+
+body.dark-mode .theme-button {
+    background: #34284a !important;
+    border: 2px solid #9b63e6;
+}
