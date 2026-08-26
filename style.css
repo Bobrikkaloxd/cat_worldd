@@ -906,3 +906,50 @@ body.dark-mode .modal-content {
 body.dark-mode .modal-text p {
     color: #c9c0dc !important;
 }
+
+/* 🐾 СЕКРЕТНАЯ ПАСХАЛКА */
+.easter-egg {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(20, 12, 35, 0.75);
+    padding: 20px;
+}
+
+.easter-egg.show {
+    display: flex;
+}
+
+.easter-egg img {
+    display: block;
+    max-width: 90vw;
+    max-height: 75vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 20px;
+}
+
+.easter-egg-close {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+
+    width: 45px;
+    height: 45px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #b879ff;
+    color: white;
+
+    font-size: 28px;
+    cursor: pointer;
+    z-index: 10000;
+}
