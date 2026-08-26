@@ -626,4 +626,65 @@ body.dark-mode .theme-button {
 body.dark-mode .second-button {
     background-color: #34284a;
     color: #eee8ff;
+/* 💜 ЛАВАНДОВЫЕ ДЕТАЛИ В НОЧНОМ КОТОПОЛИСЕ */
+
+body.dark-mode .hero-text .little-title {
+    color: #c58aff;
+}
+
+body.dark-mode .hero-text h1 span {
+    color: #b879ff;
+}
+
+body.dark-mode .main-button {
+    background: #9b63e6;
+    color: white;
+}
+
+body.dark-mode .main-button:hover {
+    background: #ad7af2;
+}
+
+body.dark-mode .cat-card .name-tag {
+    background: #9b63e6;
+    color: white;
+}
+
+body.dark-mode .purple-button,
+body.dark-mode .orange-button,
+body.dark-mode .blue-button {
+    background: #9b63e6;
+    color: white;
+    border-color: #b879ff;
+}
+
+body.dark-mode .purple-button:hover,
+body.dark-mode .orange-button:hover,
+body.dark-mode .blue-button:hover {
+    background: #b879ff;
+}
+
+body.dark-mode .heart {
+    color: #d09aff;
+}
+
+body.dark-mode .heart.liked {
+    background: #4a3268;
+    color: #d8a8ff;
+}
+
+body.dark-mode .section-title h2 {
+    color: #c58aff;
+}
+
+body.dark-mode .feature-icon {
+    color: #d09aff;
+}
+
+body.dark-mode .logo {
+    color: #c58aff;
+}
+
+body.dark-mode .logo span {
+    color: #c58aff;
 }
