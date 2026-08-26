@@ -953,3 +953,12 @@ body.dark-mode .modal-text p {
     cursor: pointer;
     z-index: 10000;
 }
+
+/* Спрятать пасхалку до момента открытия */
+.easter-egg-modal {
+    display: none;
+}
+
+.easter-egg-modal.show {
+    display: flex;
+}
