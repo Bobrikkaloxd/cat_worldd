@@ -842,3 +842,85 @@ body.dark-mode .cat-card:hover {
 .heart.liked {
     transform: scale(1.15);
 }
+/* 🐱💜 ИСПРАВЛЕНИЕ ОКОШКА КОТИКА */
+
+.modal {
+    display: none !important;
+    position: fixed !important;
+    inset: 0 !important;
+    z-index: 9999 !important;
+
+    width: 100% !important;
+    height: 100% !important;
+
+    background: rgba(20, 12, 30, 0.72) !important;
+
+    align-items: center !important;
+    justify-content: center !important;
+
+    padding: 20px !important;
+    box-sizing: border-box !important;
+}
+
+.modal.show {
+    display: flex !important;
+}
+
+.modal-content {
+    position: relative !important;
+
+    width: min(650px, 100%) !important;
+    max-height: 90vh !important;
+
+    background: white !important;
+    border-radius: 30px !important;
+
+    overflow: hidden !important;
+
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35) !important;
+
+    animation: modalAppear 0.25s ease !important;
+}
+
+.modal-content img {
+    display: block !important;
+
+    width: 100% !important;
+    height: 330px !important;
+
+    object-fit: cover !important;
+}
+
+.modal-text {
+    padding: 25px 30px 30px !important;
+}
+
+.close-modal {
+    position: absolute !important;
+
+    right: 15px !important;
+    top: 15px !important;
+
+    width: 42px !important;
+    height: 42px !important;
+
+    border: none !important;
+    border-radius: 50% !important;
+
+    background: white !important;
+    color: #493843 !important;
+
+    font-size: 28px !important;
+    cursor: pointer !important;
+
+    z-index: 10 !important;
+}
+
+body.dark-mode .modal-content {
+    background: #29213a !important;
+    color: #eee8ff !important;
+}
+
+body.dark-mode .modal-text p {
+    color: #c9c0dc !important;
+}
