@@ -955,10 +955,10 @@ body.dark-mode .modal-text p {
 }
 
 /* Спрятать пасхалку до момента открытия */
-.easter-egg-modal {
+.easter-egg {
     display: none;
 }
 
-.easter-egg-modal.show {
+.easter-egg.show {
     display: flex;
 }
