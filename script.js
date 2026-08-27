@@ -1,7 +1,8 @@
 // ===============================
 // 🐱 КОТОПОЛИС — SCRIPT.JS
 // ===============================
-
+document.addEventListener("DOMContentLoaded", function () {
+    
 const cats = [
     {
         name: "Гордюша 🤍",
@@ -216,3 +217,5 @@ if (easterEgg) {
     });
 
 }
+    
+});
