@@ -1133,3 +1133,49 @@ body.dark-mode .modal-text p {
     bottom: 15px;
     z-index: 10;
 }
+    
+/* 🐱 ФИНАЛЬНЫЙ ФИКС КАРТОЧЕК ЗАВЕРТИНА И КАСИ */
+
+.cat-card {
+    display: flex !important;
+    flex-direction: column !important;
+    background: white !important;
+    border-radius: 25px !important;
+    overflow: hidden !important;
+}
+
+.cat-card > img {
+    width: 100% !important;
+    height: 180px !important;
+    min-height: 180px !important;
+    max-height: 180px !important;
+    object-fit: cover !important;
+    display: block !important;
+}
+
+.cat-card .cat-card-content {
+    display: flex !important;
+    flex-direction: column !important;
+    min-height: 180px !important;
+    padding: 20px !important;
+    background: white !important;
+    box-sizing: border-box !important;
+}
+
+.cat-card .details-button {
+    display: inline-block !important;
+    width: fit-content !important;
+    margin-top: auto !important;
+    padding: 11px 22px !important;
+    border: none !important;
+    border-radius: 14px !important;
+    background: #f3d9e5 !important;
+    color: #8f4f68 !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
+}
+
+.cat-card .details-button:hover {
+    transform: translateY(-2px);
+}
