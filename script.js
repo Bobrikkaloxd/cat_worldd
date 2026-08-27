@@ -13,7 +13,7 @@ const cats = [
         name: "Филя 🖤",
         image: "filia.jpg",
         description: "Немного загадочный, очень красивый и внимательный кот с невероятными глазами."
-    }
+    },
     {
     name: "Завертино 🐱",
     image: "zavertin.jpg",
