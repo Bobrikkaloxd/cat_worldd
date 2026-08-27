@@ -279,3 +279,59 @@ if (closeEasterEgg && easterEgg) {
         });
     }
 })();
+// 🐱 КНОПКИ "ПОДРОБНЕЕ"
+document.querySelectorAll(".details-button").forEach(button => {
+    button.addEventListener("click", function () {
+        const card = this.closest(".cat-card");
+
+        if (!card) return;
+
+        const title = card.querySelector("h3");
+        const image = card.querySelector("img");
+        const text = card.querySelector("p");
+
+        const modal = document.querySelector(".modal");
+
+        if (!modal) return;
+
+        const modalTitle = modal.querySelector(".modal-text h2");
+        const modalText = modal.querySelector(".modal-text p");
+        const modalImage = modal.querySelector(".modal-content img");
+
+        if (modalTitle && title) {
+            modalTitle.textContent = title.textContent;
+        }
+
+        if (modalText && text) {
+            modalText.textContent = text.textContent;
+        }
+
+        if (modalImage && image) {
+            modalImage.src = image.src;
+        }
+
+        modal.classList.add("show");
+    });
+});
+
+
+// ❌ Закрытие окна котика
+document.querySelectorAll(".close-modal").forEach(button => {
+    button.addEventListener("click", function () {
+        const modal = this.closest(".modal");
+
+        if (modal) {
+            modal.classList.remove("show");
+        }
+    });
+});
+
+
+// Закрытие по клику на затемнение
+document.querySelectorAll(".modal").forEach(modal => {
+    modal.addEventListener("click", function (event) {
+        if (event.target === modal) {
+            modal.classList.remove("show");
+        }
+    });
+});
