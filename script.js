@@ -63,7 +63,7 @@ detailsButtons.forEach(function (button, index) {
         modalImage.src = cat.image;
         modalImage.alt = cat.name;
 
-        modalName.textContent = cat.name;
+        modalDescription.textContent = cat.fullDescription || cat.description;
         modalDescription.textContent = cat.description;
 
         modal.classList.add("show");
