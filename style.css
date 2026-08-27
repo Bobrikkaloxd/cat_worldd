@@ -259,10 +259,11 @@ h1 span {
     background: white;
     border-radius: 25px;
     overflow: hidden;
-
     box-shadow: 0 10px 35px rgba(100, 70, 90, 0.10);
-
     transition: 0.25s;
+
+    display: flex;
+    flex-direction: column;
 }
 
 .cat-card:hover {
@@ -287,12 +288,8 @@ h1 span {
     display: block;
 }
 
-.cat-card {
-    display: flex;
-    flex-direction: column;
-}
-
 .cat-card-content {
+    padding: 20px;
     display: flex;
     flex-direction: column;
     flex: 1;
