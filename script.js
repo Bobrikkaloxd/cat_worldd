@@ -114,90 +114,73 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 
-    // =========================
-    // 🐱 ОКОШКО "ПОДРОБНЕЕ"
-    // =========================
+ // 🐱 КНОПКИ «ПОДРОБНЕЕ»
 
-    const modal = document.querySelector(".modal");
+document.querySelectorAll(".details-button").forEach(function (button) {
 
-    if (modal) {
+    button.addEventListener("click", function () {
+
+        const card = button.closest(".cat-card");
+        const modal = document.querySelector(".modal");
+
+        if (!card || !modal) return;
+
+        const image = card.querySelector("img");
+        const title = card.querySelector("h3");
+        const text = card.querySelector("p");
 
         const modalImage = modal.querySelector(".modal-content img");
         const modalTitle = modal.querySelector(".modal-text h2");
         const modalText = modal.querySelector(".modal-text p");
 
-        // Кнопки "Подробнее"
-        document.querySelectorAll(".details-button").forEach(function (button, index) {
+        if (modalImage && image) {
+            modalImage.src = image.src;
+        }
 
-            button.addEventListener("click", function (event) {
+        if (modalTitle && title) {
+            modalTitle.textContent = title.textContent;
+        }
 
-                event.preventDefault();
-                event.stopPropagation();
+        if (modalText && text) {
+            modalText.textContent = text.textContent;
+        }
 
-                const card = button.closest(".cat-card");
+        modal.classList.add("show");
+    });
 
-                // Если карточка существует — берём данные прямо из неё
-                if (card) {
-
-                    const image = card.querySelector("img");
-                    const title = card.querySelector("h3");
-                    const description = card.querySelector("p");
-
-                    if (modalImage && image) {
-                        modalImage.src = image.src;
-                    }
-
-                    if (modalTitle && title) {
-                        modalTitle.textContent = title.textContent;
-                    }
-
-                    if (modalText && description) {
-                        modalText.textContent = description.textContent;
-                    }
-
-                } else {
-
-                    // Запасной вариант — данные из массива cats
-                    const cat = cats[index];
-
-                    if (cat) {
-
-                        if (modalImage) {
-                            modalImage.src = cat.image;
-                        }
-
-                        if (modalTitle) {
-                            modalTitle.textContent = cat.name;
-                        }
-
-                        if (modalText) {
-                            modalText.textContent =
-                                cat.fullDescription || cat.description;
-                        }
-
-                    }
-
-                }
-
-                modal.classList.add("show");
-
-            });
-
-        });
+});
 
 
-        // ❌ Закрытие модального окна
-        document.querySelectorAll(".close-modal").forEach(function (button) {
+// ❌ ЗАКРЫТИЕ ОКОШКА
 
-            button.addEventListener("click", function () {
-                modal.classList.remove("show");
-            });
+document.querySelectorAll(".close-modal").forEach(function (button) {
 
-        });
+    button.addEventListener("click", function () {
+
+        const modal = button.closest(".modal");
+
+        if (modal) {
+            modal.classList.remove("show");
+        }
+
+    });
+
+});
 
 
-        // Клик по затемнению
-        modal.addEventListener("click", function (event) {
+// 🌸 КЛИК ПО ЗАТЕМНЕНИЮ
+
+document.querySelectorAll(".modal").forEach(function (modal) {
+
+    modal.addEventListener("click", function (event) {
+
+        if (event.target === modal) {
+            modal.classList.remove("show");
+        }
+
+    });
+
+});
 
             if (event.target === modal) {
                 modal.classList.remove("show");
