@@ -312,6 +312,8 @@ h1 span {
     display: flex;
     flex-direction: column;
     flex: 1;
+    .details-button {
+    margin-top: auto;
 }
 
 .name-tag {
