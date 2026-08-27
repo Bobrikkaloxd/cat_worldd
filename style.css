@@ -971,3 +971,10 @@ body.dark-mode .modal-text p {
     object-position: center;
     display: block;
 }
+/* 🐱 Нормальный размер фотографий котиков */
+.cat-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+}
