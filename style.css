@@ -1120,3 +1120,14 @@ body.dark-mode .modal-text p {
 .details-button {
     margin-top: auto !important;
 }
+/* Сердечко поверх фотографии */
+.photo-container {
+    position: relative;
+}
+
+.photo-container .heart {
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    z-index: 10;
+}
