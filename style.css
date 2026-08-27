@@ -1,3 +1,7 @@
+/* ========================================
+   🐾 КОТОПОЛИС — ОСНОВНЫЕ СТИЛИ
+======================================== */
+
 * {
     box-sizing: border-box;
 }
@@ -9,135 +13,162 @@ html {
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #fff9fc;
-    color: #493843;
+    background: #fff7fb;
+    color: #493b49;
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
-/* NAVIGATION */
+/* ========================================
+   🌸 НАВИГАЦИЯ
+======================================== */
 
 .navbar {
-    width: 92%;
-    max-width: 1150px;
-    margin: 18px auto;
-    padding: 18px 28px;
-
-    background: rgba(255, 255, 255, 0.9);
-    border-radius: 25px;
+    position: sticky;
+    top: 20px;
+    z-index: 100;
+    
+    width: calc(100% - 80px);
+    max-width: 1240px;
+    margin: 20px auto;
+    padding: 20px 30px;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    box-shadow: 0 8px 30px rgba(120, 70, 100, 0.08);
+    background: rgba(255, 255, 255, 0.92);
+    border-radius: 28px;
+    box-shadow: 0 10px 35px rgba(170, 120, 150, 0.12);
 
-    position: sticky;
-    top: 15px;
-    z-index: 10;
+    backdrop-filter: blur(15px);
 }
 
 .logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: #f17891;
-}
-
-.logo span {
-    margin-left: 5px;
-}
-
-nav {
     display: flex;
-    gap: 28px;
+    align-items: center;
+    gap: 10px;
+
+    font-size: 24px;
+    font-weight: 800;
+    color: #ef718f;
+
+    cursor: pointer;
 }
 
-nav a {
+.navbar nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.navbar nav a {
+    color: #554855;
     text-decoration: none;
-    color: #5d5057;
-    font-weight: bold;
+    font-weight: 700;
+    transition: color 0.2s ease;
 }
 
-nav a:hover {
-    color: #f17891;
+.navbar nav a:hover {
+    color: #ef718f;
 }
 
+.theme-button {
+    width: 42px;
+    height: 42px;
 
-/* HERO */
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background: white;
+
+    cursor: pointer;
+    font-size: 20px;
+}
+
+/* ========================================
+   🏠 ГЛАВНАЯ
+======================================== */
 
 .hero {
-    max-width: 1150px;
-    margin: 45px auto 80px;
+    max-width: 1240px;
+    min-height: 620px;
 
-    padding: 70px 55px;
+    margin: 50px auto;
+    padding: 70px;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    gap: 50px;
-
     background:
-        radial-gradient(circle at 20% 20%, #ffe5ef, transparent 25%),
-        radial-gradient(circle at 90% 70%, #eee2ff, transparent 30%),
-        #fffdfd;
+        radial-gradient(circle at 85% 20%, #eadcff 0, transparent 30%),
+        radial-gradient(circle at 10% 70%, #ffe1eb 0, transparent 35%),
+        white;
 
     border-radius: 40px;
-
-    box-shadow: 0 15px 50px rgba(130, 80, 110, 0.08);
 }
 
 .hero-text {
-    max-width: 570px;
+    width: 48%;
 }
 
 .little-title {
-    color: #f17891;
-    font-size: 14px;
-    font-weight: bold;
+    color: #ef718f;
+    font-size: 15px;
+    font-weight: 800;
 }
 
-h1 {
-    font-size: 52px;
-    line-height: 1.1;
-    margin: 20px 0;
+.hero h1 {
+    margin: 25px 0;
+    font-size: 64px;
+    line-height: 1.05;
+    color: #493b49;
 }
 
-h1 span {
-    color: #f17891;
+.hero h1 span {
+    color: #ef718f;
 }
 
-.hero-text p {
-    font-size: 18px;
-    line-height: 1.7;
-    color: #75666e;
+.hero-text > p {
+    max-width: 560px;
+
+    font-size: 19px;
+    line-height: 1.8;
+    color: #776a77;
 }
 
 .buttons {
     display: flex;
-    gap: 15px;
     flex-wrap: wrap;
+    gap: 15px;
     margin-top: 30px;
 }
 
 .main-button,
 .second-button {
-    padding: 15px 22px;
-    border-radius: 15px;
+    padding: 16px 24px;
+
+    border-radius: 16px;
+
     font-size: 16px;
-    font-weight: bold;
+    font-weight: 700;
+
     cursor: pointer;
     text-decoration: none;
+
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .main-button {
-    background: #f17891;
+    background: #ef718f;
     color: white;
     border: none;
+    box-shadow: 0 10px 25px rgba(239, 113, 143, 0.25);
 }
 
 .second-button {
     background: white;
-    color: #493843;
-    border: 2px solid #f1e5ea;
+    color: #604f60;
+    border: 2px solid #f0d9e2;
 }
 
 .main-button:hover,
@@ -146,134 +177,150 @@ h1 span {
 }
 
 #result {
-    font-weight: bold;
-    color: #f17891;
+    margin-top: 20px;
+    font-weight: 700;
+    color: #ef718f;
 }
 
-
-/* HERO CATS */
+/* ========================================
+   🐱 КОТИКИ НА ГЛАВНОЙ
+======================================== */
 
 .hero-decoration {
     position: relative;
-    width: 430px;
+    width: 45%;
 }
 
 .hero-cats {
-    width: 390px;
-    height: 390px;
+    width: 430px;
+    height: 430px;
 
-    border-radius: 45% 55% 50% 50%;
-
-    overflow: hidden;
-
-    border: 5px solid #ffb0c0;
-
-    transform: rotate(2deg);
-
-    background: #f5eaff;
+    margin: auto;
 
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+    overflow: hidden;
+
+    border: 7px solid #ff9ab0;
+    border-radius: 50%;
+
+    background: white;
 }
 
 .hero-cats img {
     width: 100%;
-    height: 250px;
+    height: 100%;
     object-fit: cover;
 }
 
 .hero-cats img:first-child {
-    grid-column: span 2;
-    height: 195px;
-}
-
-.hero-cats img:nth-child(2),
-.hero-cats img:nth-child(3) {
-    height: 195px;
+    grid-column: 1 / 3;
 }
 
 .paw {
     position: absolute;
-    font-size: 35px;
     z-index: 2;
+    font-size: 34px;
 }
 
 .paw1 {
-    left: -20px;
-    top: 30px;
+    left: 0;
+    top: 20%;
 }
 
 .paw2 {
-    right: 5px;
-    top: -25px;
-    color: #ff9eb0;
+    right: 0;
+    top: 15%;
+    color: #ff8fa8;
 }
 
 .paw3 {
-    right: -15px;
-    bottom: 30px;
-    color: #cda5ff;
+    right: 5%;
+    bottom: 5%;
+    color: #b99aff;
 }
 
-
-/* SECTION */
+/* ========================================
+   🐾 СЕКЦИЯ КОТИКОВ
+======================================== */
 
 .cats-section {
-    max-width: 1100px;
-    margin: 0 auto 80px;
-    padding: 20px;
+    max-width: 1240px;
+    margin: 100px auto;
+    padding: 0 20px;
 }
 
 .section-title {
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     gap: 15px;
 }
 
 .section-title h2 {
-    font-size: 36px;
     margin: 0;
+
+    font-size: 42px;
+    color: #493b49;
 }
 
 .section-title span {
-    color: #f17891;
+    font-size: 24px;
 }
 
 .section-subtitle {
     text-align: center;
-    color: #887780;
-    margin-bottom: 40px;
+    color: #8b7c89;
+    font-size: 18px;
+    margin: 20px 0 60px;
 }
 
-
-/* CARDS */
+/* ========================================
+   🐱 СЕТКА КАРТОЧЕК
+======================================== */
 
 .cats {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 28px;
-
-    padding-top: 100px;
+    gap: 30px;
+    align-items: stretch;
 }
 
 .cat-card {
-    background: white;
-    border-radius: 25px;
-    overflow: hidden;
-    box-shadow: 0 10px 35px rgba(100, 70, 90, 0.10);
-    transition: 0.25s;
-
     display: flex;
     flex-direction: column;
+
+    overflow: hidden;
+
+    background: white;
+    border-radius: 25px;
+
+    box-shadow: 0 15px 40px rgba(120, 80, 110, 0.10);
+
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .cat-card:hover {
-    transform: translateY(-8px);
+    transform: translateY(-7px);
+    box-shadow: 0 20px 45px rgba(120, 80, 110, 0.16);
+}
+
+/* ========================================
+   🖼️ ФОТО
+======================================== */
+
+.photo-container,
+.cat-card > img {
+    width: 100%;
+    height: 280px;
+    flex-shrink: 0;
+
+    object-fit: cover;
 }
 
 .photo-container {
-    height: 180px;
     position: relative;
 }
 
@@ -281,901 +328,528 @@ h1 span {
     width: 100%;
     height: 100%;
     object-fit: cover;
-}
-
-.photo-container {
-    position: relative;
-    width: 100%;
-    height: 300px;
-    overflow: hidden;
-}
-
-.photo-container img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
     display: block;
 }
 
-.cat-card-content {
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    position: relative;
-    z-index: 1;
-    background: white;
+.cat-card > img {
+    display: block;
 }
 
-.cat-card-content {
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    .details-button {
-    margin-top: auto;
-}
+/* ========================================
+   🏷️ ИМЕНА
+======================================== */
 
 .name-tag {
     position: absolute;
-    top: 15px;
     left: 15px;
+    bottom: 15px;
 
-    padding: 8px 14px;
-
-    background: white;
+    padding: 7px 14px;
 
     border-radius: 12px;
 
-    font-weight: bold;
+    background: rgba(255, 255, 255, 0.9);
+
+    font-weight: 800;
 }
 
 .purple {
-    color: #9b6ee8;
+    color: #8d6aa8;
 }
 
 .orange {
-    color: #e99038;
+    color: #d98535;
 }
 
 .blue {
-    color: #55a9dd;
+    color: #6288b5;
 }
+
+/* ========================================
+   ❤️ СЕРДЕЧКО
+======================================== */
 
 .heart {
     position: absolute;
     right: 15px;
-    bottom: -18px;
+    top: 15px;
 
     width: 42px;
     height: 42px;
 
+    border: none;
     border-radius: 50%;
 
-    border: 3px solid white;
+    background: rgba(255, 255, 255, 0.9);
 
-    background: #f1d8ff;
-
-    color: #9b6ee8;
-
-    font-size: 23px;
+    color: #ef718f;
+    font-size: 25px;
 
     cursor: pointer;
 }
 
-.card-content {
-    padding: 25px;
+.heart.liked {
+    color: #ef4e72;
 }
 
-.card-content h3 {
-    margin-top: 5px;
-    font-size: 24px;
+/* ========================================
+   📝 СОДЕРЖИМОЕ КАРТОЧКИ
+======================================== */
+
+.card-content,
+.cat-card-content {
+    display: flex;
+    flex-direction: column;
+
+    flex: 1;
+
+    padding: 22px;
 }
 
-.card-content p {
-    line-height: 1.6;
-    color: #75666e;
+.card-content h3,
+.cat-card-content h3 {
+    margin: 0 0 14px;
+
+    font-size: 22px;
+    color: #493b49;
 }
+
+.card-content p,
+.cat-card-content p {
+    margin: 0;
+
+    color: #655766;
+    font-size: 16px;
+    line-height: 1.45;
+}
+
+/* ========================================
+   🌸 КНОПКИ «ПОДРОБНЕЕ»
+======================================== */
 
 .details-button {
-    width: 100%;
-    padding: 12px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 
-    border-radius: 12px;
+    width: fit-content;
 
-    font-weight: bold;
+    margin-top: auto;
+    padding: 11px 20px;
 
-    background: white;
+    border: none;
+    border-radius: 14px;
+
+    background: #f7dce6;
+    color: #8c5269;
+
+    font-size: 14px;
+    font-weight: 800;
 
     cursor: pointer;
+
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.details-button:hover {
+    transform: translateY(-2px);
+    background: #f2cbd9;
 }
 
 .purple-button {
-    border: 2px solid #dfc8ff;
-    color: #9b6ee8;
+    background: #eadff3;
+    color: #79578e;
 }
 
 .orange-button {
-    border: 2px solid #ffd4ad;
-    color: #e99038;
+    background: #f8e3ce;
+    color: #a4662c;
 }
 
 .blue-button {
-    border: 2px solid #bde2ff;
-    color: #55a9dd;
+    background: #dce9f6;
+    color: #557da4;
 }
 
-
-/* FEATURES */
+/* ========================================
+   ❤️ БЛОК FEATURES
+======================================== */
 
 .features {
-    max-width: 1100px;
-    margin: 0 auto 70px;
-    padding: 25px;
+    max-width: 1240px;
+
+    margin: 100px auto;
+    padding: 50px;
 
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-
-    background: white;
-
-    border-radius: 25px;
-
-    box-shadow: 0 10px 30px rgba(100, 70, 90, 0.07);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
 }
 
 .feature {
     display: flex;
-    gap: 12px;
+    align-items: flex-start;
+    gap: 20px;
+
+    padding: 30px;
+
+    background: white;
+    border-radius: 25px;
+
+    box-shadow: 0 12px 35px rgba(120, 80, 110, 0.08);
 }
 
 .feature-icon {
-    font-size: 30px;
+    width: 55px;
+    height: 55px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 18px;
+
+    background: #ffe3eb;
+
+    font-size: 25px;
 }
 
 .feature h3 {
-    margin: 0 0 5px;
+    margin: 0 0 10px;
+    color: #493b49;
 }
 
 .feature p {
     margin: 0;
-    color: #887780;
-    line-height: 1.4;
+
+    color: #756775;
+    line-height: 1.5;
 }
 
-
-/* FOOTER */
+/* ========================================
+   🐾 FOOTER
+======================================== */
 
 footer {
-    padding: 35px 8%;
+    max-width: 1240px;
 
-    background: #fff0f5;
+    margin: 80px auto 30px;
+    padding: 35px;
 
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
+    gap: 30px;
 
-    color: #77656e;
+    background: white;
+    border-radius: 25px;
+
+    color: #6d5c6b;
+}
+
+footer b {
+    color: #ef718f;
+    font-size: 20px;
 }
 
 footer p {
-    margin: 5px 0;
+    margin: 8px 0 0;
 }
 
 .footer-paws {
     font-size: 24px;
 }
 
-
-/* PHONE */
-
-@media (max-width: 800px) {
-
-    .navbar {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    nav {
-        gap: 15px;
-    }
-
-    .hero {
-        margin: 25px 15px 50px;
-        padding: 40px 25px;
-
-        flex-direction: column;
-        text-align: center;
-    }
-
-    h1 {
-        font-size: 38px;
-    }
-
-    .buttons {
-        justify-content: center;
-    }
-
-    .hero-decoration {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-    }
-
-    .hero-cats {
-        width: 300px;
-        height: 300px;
-    }
-
-    .hero-cats img:first-child,
-    .hero-cats img:nth-child(2),
-    .hero-cats img:nth-child(3) {
-        height: 150px;
-    }
-
-    .cats {
-        grid-template-columns: 1fr;
-        max-width: 400px;
-        margin: auto;
-    }
-
-    .features {
-        grid-template-columns: 1fr;
-        margin: 20px;
-    }
-
-    footer {
-        flex-direction: column;
-        text-align: center;
-        gap: 15px;
-    }
-    
-    }
-    
-.modal { display: none; position: fixed; z-index: 100; left: 0; top: 0; width: 100%; height: 100%; background: rgba(60, 40, 55, 0.55); align-items: center; justify-content: center; padding: 20px; }
-.modal.show { display: flex; }
-.modal-content { position: relative; max-width: 650px; width: 100%; background: white; border-radius: 30px; overflow: hidden; box-shadow: 0 20px 60px rgba(60, 40, 70, 0.25); animation: modalAppear 0.25s ease; }
-.modal-content img { width: 100%; height: 330px; object-fit: cover; }
-.modal-text { padding: 25px 30px 30px; }
-.modal-text h2 { margin-top: 0; font-size: 30px; }
-.modal-text p { color: #75666e; line-height: 1.7; font-size: 17px; }
-.close-modal { position: absolute; right: 15px; top: 15px; width: 42px; height: 42px; border: none; border-radius: 50%; background: white; color: #493843; font-size: 28px; cursor: pointer; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12); z-index: 2; }
-.close-modal:hover { transform: scale(1.08); }
-@keyframes modalAppear { from { opacity: 0; transform: scale(0.9); }
-to {
-    opacity: 1;
-    transform: scale(1);
-}}
-@media (max-width: 600px) { .modal-content img { height: 250px; }
-.modal-text {
-    padding: 20px;
-}}
-.heart.liked {
-    background: #ffd6e2;
-    color: #f17891;
-    transform: scale(1.15);
-}.theme-button {
-    width: 42px;
-    height: 42px;
-
-    border: none;
-    border-radius: 50%;
-
-    background: #f4e9ff;
-
-    font-size: 20px;
-
-    cursor: pointer;
-
-    transition: 0.25s;
-}
-.theme-button:hover {
-    transform: rotate(15deg) scale(1.08);
-}
-body {
-    transition: background-color 0.4s ease, color 0.4s ease;
-}
-
-body.dark-mode {
-    background-color: #171323;
-    color: #eee8ff;
-}
-
-body.dark-mode .navbar {
-    background-color: #211a32;
-}
-
-body.dark-mode .navbar a {
-    color: #eee8ff;
-}
-
-body.dark-mode .hero {
-    background-color: #171323;
-}
-
-body.dark-mode .hero-text h1 {
-    color: #eee8ff;
-}
-
-body.dark-mode .hero-text p {
-    color: #c9c0dc;
-}
-
-body.dark-mode .cats-section {
-    background-color: #1d1729;
-}
-
-body.dark-mode .section-title h2 {
-    color: #eee8ff;
-}
-
-body.dark-mode .section-subtitle {
-    color: #c9c0dc;
-}
-
-body.dark-mode .cat-card {
-    background-color: #29213a;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
-}
-
-body.dark-mode .cat-card h3 {
-    color: #eee8ff;
-}
-
-body.dark-mode .cat-card p {
-    color: #c9c0dc;
-}
-
-body.dark-mode .features {
-    background-color: #171323;
-}
-
-body.dark-mode .feature {
-    background-color: #29213a;
-}
-
-body.dark-mode .feature h3 {
-    color: #eee8ff;
-}
-
-body.dark-mode .feature p {
-    color: #c9c0dc;
-}
-
-body.dark-mode footer {
-    background-color: #110d19;
-    color: #c9c0dc;
-}
-
-body.dark-mode .modal-content {
-    background-color: #29213a;
-    color: #eee8ff;
-}
-
-body.dark-mode .modal-text p {
-    color: #c9c0dc;
-}
-
-body.dark-mode .theme-button {
-    background-color: #34284a;
-}
-
-body.dark-mode .second-button {
-    background-color: #34284a;
-    color: #eee8ff;
-    
-}
-    
-/* 💜 ЛАВАНДОВЫЕ ДЕТАЛИ В НОЧНОМ КОТОПОЛИСЕ */
-
-body.dark-mode .hero-text .little-title {
-    color: #c58aff;
-}
-
-body.dark-mode .hero-text h1 span {
-    color: #b879ff;
-}
-
-body.dark-mode .main-button {
-    background: #9b63e6;
-    color: white;
-}
-
-body.dark-mode .main-button:hover {
-    background: #ad7af2;
-}
-
-body.dark-mode .cat-card .name-tag {
-    background: #9b63e6;
-    color: white;
-}
-
-body.dark-mode .purple-button,
-body.dark-mode .orange-button,
-body.dark-mode .blue-button {
-    background: #9b63e6;
-    color: white;
-    border-color: #b879ff;
-}
-
-body.dark-mode .purple-button:hover,
-body.dark-mode .orange-button:hover,
-body.dark-mode .blue-button:hover {
-    background: #b879ff;
-}
-
-body.dark-mode .heart {
-    color: #d09aff;
-}
-
-body.dark-mode .heart.liked {
-    background: #4a3268;
-    color: #d8a8ff;
-}
-
-body.dark-mode .section-title h2 {
-    color: #c58aff;
-}
-
-body.dark-mode .feature-icon {
-    color: #d09aff;
-}
-
-body.dark-mode .logo {
-    color: #c58aff;
-}
-
-body.dark-mode .logo span {
-    color: #c58aff;
-}
-    
-/* 💜 КНОПКИ "ПОДРОБНЕЕ" В НОЧНОМ РЕЖИМЕ */
-
-body.dark-mode .details-button {
-    background: #9b63e6 !important;
-    color: #ffffff !important;
-    border: 2px solid #b879ff !important;
-    border-radius: 14px !important;
-}
-
-body.dark-mode .details-button:hover {
-    background: #b879ff !important;
-    transform: translateY(-2px);
-}
-
-/* ✨ ИКОНКИ В НОЧНОМ РЕЖИМЕ */
-
-body.dark-mode .feature-icon {
-    background: #34284a;
-    border-radius: 50%;
-    color: #d09aff;
-}
-body.dark-mode .second-button {
-    border-color: #b879ff !important;
-}
-
-body.dark-mode .theme-button {
-    background: #34284a !important;
-    border: 2px solid #9b63e6;
-}
-.details-button {
-    display: inline-block;
-    padding: 11px 22px;
-
-    border: none;
-    border-radius: 14px;
-
-    background: #f3d9e5;
-    color: #8f4f68;
-
-    font-size: 14px;
-    font-weight: 600;
-
-    cursor: pointer;
-
-    transition: 0.25s ease;
-}
-    
-.details-button:hover {
-    transform: translateY(-2px);
-} body.dark-mode .details-button {
-    background: #9b63e6 !important;
-    color: #ffffff !important;
-    border: 2px solid #b879ff !important;
-}
-
-body.dark-mode .details-button:hover {
-    background: #b879ff !important;
-}
-
-/* 🌙💜 ОСТАВШИЕСЯ РОЗОВЫЕ АКЦЕНТЫ */
-
-body.dark-mode .hero-cats {
-    border-color: #9b63e6;
-}
-
-body.dark-mode .paw2 {
-    color: #b879ff;
-}
-
-body.dark-mode .section-title span {
-    color: #b879ff;
-}
-
-body.dark-mode #result {
-    color: #c58aff;
-}
-
-body.dark-mode .heart.liked {
-    background: #4a3268;
-    color: #d8a8ff;
-}
-/* 🌙💜 ФИНАЛЬНАЯ ЦВЕТОВАЯ СХЕМА НОЧНОГО КОТОПОЛИСА */
-
-body.dark-mode .hero {
-    background:
-        radial-gradient(circle at 20% 20%, #35254f, transparent 25%),
-        radial-gradient(circle at 90% 70%, #40285f, transparent 30%),
-        #171323 !important;
-}
-
-body.dark-mode .hero-text .little-title {
-    color: #c58aff !important;
-}
-
-body.dark-mode .hero-text h1 span {
-    color: #b879ff !important;
-}
-
-body.dark-mode .hero-cats {
-    border-color: #9b63e6 !important;
-    background: #34284a !important;
-}
-
-body.dark-mode .paw2 {
-    color: #d09aff !important;
-}
-
-body.dark-mode .paw3 {
-    color: #b879ff !important;
-}
-
-body.dark-mode .section-title span {
-    color: #b879ff !important;
-}
-    
-    /* ❤️✨ ЖИВЫЕ СЕРДЕЧКИ */
-
-.heart {
-    transition:
-        transform 0.25s ease,
-        filter 0.25s ease;
-}
-
-.heart:hover {
-    transform: scale(1.2);
-    filter: drop-shadow(0 0 8px rgba(255, 150, 200, 0.6));
-}
-
-.heart.liked {
-    transform: scale(1.15);
-}
-/* 🐱💜 ИСПРАВЛЕНИЕ ОКОШКА КОТИКА */
-
-.modal {
-    display: none !important;
-    position: fixed !important;
-    inset: 0 !important;
-    z-index: 9999 !important;
-
-    width: 100% !important;
-    height: 100% !important;
-
-    background: rgba(20, 12, 30, 0.72) !important;
-
-    align-items: center !important;
-    justify-content: center !important;
-
-    padding: 20px !important;
-    box-sizing: border-box !important;
-}
-
-.modal.show {
-    display: flex !important;
-}
-
-.modal-content {
-    position: relative !important;
-
-    width: min(650px, 100%) !important;
-    max-height: 90vh !important;
-
-    background: white !important;
-    border-radius: 30px !important;
-
-    overflow: hidden !important;
-
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35) !important;
-
-    animation: modalAppear 0.25s ease !important;
-}
-
-.modal-content img {
-    display: block !important;
-
-    width: 100% !important;
-    height: 330px !important;
-
-    object-fit: cover !important;
-}
-
-.modal-text {
-    padding: 25px 30px 30px !important;
-}
-
-.close-modal {
-    position: absolute !important;
-
-    right: 15px !important;
-    top: 15px !important;
-
-    width: 42px !important;
-    height: 42px !important;
-
-    border: none !important;
-    border-radius: 50% !important;
-
-    background: white !important;
-    color: #493843 !important;
-
-    font-size: 28px !important;
-    cursor: pointer !important;
-
-    z-index: 10 !important;
-}
-
-body.dark-mode .modal-content {
-    background: #29213a !important;
-    color: #eee8ff !important;
-}
-
-body.dark-mode .modal-text p {
-    color: #c9c0dc !important;
-}
-
-/* 🐾 СЕКРЕТНАЯ ПАСХАЛКА */
+/* ========================================
+   🪟 ОКОШКО «ПОДРОБНЕЕ»
+======================================== */
+
+.modal,
 .easter-egg {
-    display: none;
     position: fixed;
     inset: 0;
-    z-index: 9999;
 
+    z-index: 1000;
+
+    display: none;
     align-items: center;
     justify-content: center;
 
-    background: rgba(20, 12, 35, 0.75);
     padding: 20px;
+
+    background: rgba(45, 30, 45, 0.55);
+    backdrop-filter: blur(8px);
 }
 
+.modal.show,
 .easter-egg.show {
     display: flex;
 }
 
-.easter-egg img {
-    display: block;
-    max-width: 90vw;
-    max-height: 75vh;
-    width: auto;
-    height: auto;
-    object-fit: contain;
+.modal-content {
+    position: relative;
+
+    width: min(850px, 100%);
+
+    display: flex;
+
+    overflow: hidden;
+
+    background: white;
+    border-radius: 30px;
+
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.25);
+}
+
+.modal-content img {
+    width: 45%;
+    min-height: 400px;
+
+    object-fit: cover;
+}
+
+.modal-text {
+    padding: 45px;
+}
+
+.modal-text h2 {
+    margin-top: 0;
+    color: #ef718f;
+    font-size: 32px;
+}
+
+.modal-text p {
+    white-space: pre-line;
+    color: #655766;
+    line-height: 1.7;
+}
+
+.close-modal {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+
+    z-index: 2;
+
+    width: 40px;
+    height: 40px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: white;
+
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* ========================================
+   ✨ ПАСХАЛКА
+======================================== */
+
+.easter-egg-window {
+    position: relative;
+
+    width: min(500px, 100%);
+
+    padding: 35px;
+
+    text-align: center;
+
+    background: white;
+    border-radius: 30px;
+
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.25);
+}
+
+.easter-egg-title {
+    margin-bottom: 20px;
+
+    color: #9b70bd;
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.easter-egg-window img {
+    width: 100%;
+    max-height: 300px;
+
+    object-fit: cover;
+
     border-radius: 20px;
+}
+
+.easter-egg-text {
+    margin-top: 20px;
+
+    color: #8b55ad;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.easter-egg-small {
+    margin-top: 10px;
+    color: #817482;
 }
 
 .easter-egg-close {
     position: absolute;
-    top: 20px;
-    right: 25px;
-
-    width: 45px;
-    height: 45px;
+    right: 15px;
+    top: 15px;
 
     border: none;
-    border-radius: 50%;
-
-    background: #b879ff;
-    color: white;
+    background: none;
 
     font-size: 28px;
     cursor: pointer;
-    z-index: 10000;
 }
 
-/* Спрятать пасхалку до момента открытия */
-.easter-egg {
-    display: none;
+/* ========================================
+   🌙 ТЁМНАЯ ТЕМА
+======================================== */
+
+body.dark-mode {
+    background: #211c24;
+    color: #eee5ed;
 }
 
-.easter-egg.show {
-    display: flex;
+body.dark-mode .navbar,
+body.dark-mode .hero,
+body.dark-mode .cat-card,
+body.dark-mode .feature,
+body.dark-mode footer,
+body.dark-mode .modal-content,
+body.dark-mode .easter-egg-window {
+    background: #302833;
 }
 
-/* Фикс фотографий котиков */
-.feature-card img {
-    width: 100%;
-    height: 260px;
-    object-fit: cover;
-    object-position: center;
-    display: block;
+body.dark-mode .navbar nav a,
+body.dark-mode .hero h1,
+body.dark-mode .section-title h2,
+body.dark-mode .card-content h3,
+body.dark-mode .cat-card-content h3,
+body.dark-mode .feature h3 {
+    color: #f4eaf2;
 }
 
-/* 🐱 Нормальный размер фотографий котиков */
-.cat-card img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    display: block;
+body.dark-mode .hero-text > p,
+body.dark-mode .section-subtitle,
+body.dark-mode .card-content p,
+body.dark-mode .cat-card-content p,
+body.dark-mode .feature p,
+body.dark-mode .modal-text p {
+    color: #cbbdca;
 }
 
-/* 🐱 ФИКС РАЗМЕРА ФОТО КОТИКОВ */
-.cat-card img {
-    width: 100% !important;
-    height: 280px !important;
-    max-height: 280px !important;
-    object-fit: cover !important;
-    display: block !important;
+body.dark-mode .second-button,
+body.dark-mode .theme-button {
+    background: #3b323e;
+    color: #f4eaf2;
+    border-color: #574b5b;
 }
 
-/* ===== ФИКС КАРТОЧЕК КОТИКОВ ===== */
-
-.cat-card {
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
+body.dark-mode .close-modal {
+    background: #3b323e;
+    color: white;
 }
 
-.cat-card > img {
-    width: 100%;
-    height: 180px;
-    min-height: 180px;
-    max-height: 180px;
-    object-fit: cover;
-    display: block;
-    flex-shrink: 0;
+/* ========================================
+   📱 АДАПТИВ
+======================================== */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        width: calc(100% - 30px);
+        padding: 16px 20px;
+    }
+
+    .navbar nav {
+        gap: 15px;
+    }
+
+    .hero {
+        margin: 30px 15px;
+        padding: 40px 25px;
+
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .hero-text,
+    .hero-decoration {
+        width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .hero-cats {
+        width: min(400px, 90vw);
+        height: min(400px, 90vw);
+    }
+
+    .cats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    footer {
+        margin-left: 15px;
+        margin-right: 15px;
+
+        flex-direction: column;
+        text-align: center;
+    }
 }
 
-.cat-card-content {
-    position: relative;
-    z-index: 2;
-    background: white;
-    padding: 20px;
-    min-height: 180px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-}
+@media (max-width: 600px) {
 
-.cat-card-content p {
-    margin-bottom: 20px;
-}
+    .navbar {
+        position: relative;
+        top: 0;
 
-.details-button {
-    margin-top: auto;
-}
-/* ===== ФИНАЛЬНЫЙ ФИКС КАРТОЧЕК ===== */
+        flex-direction: column;
+        gap: 15px;
+    }
 
-.cat-card {
-    display: flex !important;
-    flex-direction: column !important;
-    position: relative !important;
-    overflow: hidden !important;
-}
+    .navbar nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 
-.cat-card > img {
-    position: relative !important;
-    top: auto !important;
-    left: auto !important;
-    right: auto !important;
-    bottom: auto !important;
+    .hero h1 {
+        font-size: 38px;
+    }
 
-    width: 100% !important;
-    height: 180px !important;
-    min-height: 180px !important;
-    max-height: 180px !important;
+    .cats {
+        grid-template-columns: 1fr;
+    }
 
-    display: block !important;
-    object-fit: cover !important;
-    flex: 0 0 180px !important;
+    .section-title h2 {
+        font-size: 32px;
+    }
 
-    margin: 0 !important;
-    transform: none !important;
-}
+    .modal-content {
+        flex-direction: column;
+        max-height: 90vh;
+        overflow-y: auto;
+    }
 
-.cat-card-content {
-    position: relative !important;
-    top: auto !important;
-    left: auto !important;
-    right: auto !important;
-    bottom: auto !important;
+    .modal-content img {
+        width: 100%;
+        min-height: 250px;
+        max-height: 300px;
+    }
 
-    display: flex !important;
-    flex-direction: column !important;
-
-    width: 100% !important;
-    min-height: 200px !important;
-    padding: 20px !important;
-    margin: 0 !important;
-
-    background: white !important;
-    transform: none !important;
-    z-index: 2 !important;
-    box-sizing: border-box !important;
-}
-
-.cat-card-content h3 {
-    margin-top: 0 !important;
-}
-
-.cat-card-content p {
-    margin-top: 10px !important;
-}
-
-.details-button {
-    margin-top: auto !important;
-}
-/* Сердечко поверх фотографии */
-.photo-container {
-    position: relative;
-}
-
-.photo-container .heart {
-    position: absolute;
-    right: 15px;
-    bottom: 15px;
-    z-index: 10;
-}
-    
-/* 🐱 ФИНАЛЬНЫЙ ФИКС КАРТОЧЕК ЗАВЕРТИНА И КАСИ */
-
-.cat-card {
-    display: flex !important;
-    flex-direction: column !important;
-    background: white !important;
-    border-radius: 25px !important;
-    overflow: hidden !important;
-}
-
-.cat-card > img {
-    width: 100% !important;
-    height: 180px !important;
-    min-height: 180px !important;
-    max-height: 180px !important;
-    object-fit: cover !important;
-    display: block !important;
-}
-
-.cat-card .cat-card-content {
-    display: flex !important;
-    flex-direction: column !important;
-    min-height: 180px !important;
-    padding: 20px !important;
-    background: white !important;
-    box-sizing: border-box !important;
-}
-
-.cat-card .details-button {
-    display: inline-block !important;
-    width: fit-content !important;
-    margin-top: auto !important;
-    padding: 11px 22px !important;
-    border: none !important;
-    border-radius: 14px !important;
-    background: #f3d9e5 !important;
-    color: #8f4f68 !important;
-    font-size: 14px !important;
-    font-weight: 600 !important;
-    cursor: pointer !important;
-}
-
-.cat-card .details-button:hover {
-    transform: translateY(-2px);
+    .modal-text {
+        padding: 25px;
+    }
 }
