@@ -901,3 +901,59 @@ body.dark-mode .close-modal {
     background: #dedede;
     color: #666666;
 }
+/* ===== ЦВЕТА КОТИКОВ ===== */
+
+/* Соня 💛 */
+.name-tag.yellow {
+    background: #fff1a8 !important;
+    color: #806b00 !important;
+}
+
+.details-button.yellow-button {
+    background: #fff1a8 !important;
+    color: #806b00 !important;
+}
+
+/* Миса 🩵 */
+.name-tag.blue {
+    background: #c9e9f6 !important;
+    color: #4f82a3 !important;
+}
+
+.details-button.blue-button {
+    background: #c9e9f6 !important;
+    color: #4f82a3 !important;
+}
+
+/* Маруся 🤎 */
+.name-tag.brown {
+    background: #dfc5ad !important;
+    color: #76543d !important;
+}
+
+.details-button.brown-button {
+    background: #dfc5ad !important;
+    color: #76543d !important;
+}
+
+/* Анфиса 🩷 */
+.name-tag.pink {
+    background: #f6c9dc !important;
+    color: #a34f73 !important;
+}
+
+.details-button.pink-button {
+    background: #f6c9dc !important;
+    color: #a34f73 !important;
+}
+
+/* Оливия 🩶 */
+.name-tag.gray {
+    background: #d7d7d7 !important;
+    color: #5f5f5f !important;
+}
+
+.details-button.gray-button {
+    background: #d7d7d7 !important;
+    color: #5f5f5f !important;
+}
