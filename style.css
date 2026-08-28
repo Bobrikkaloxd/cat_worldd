@@ -852,4 +852,52 @@ body.dark-mode .close-modal {
     .modal-text {
         padding: 25px;
     }
+
+.yellow {
+    background: #fff3b0;
+    color: #8a7415;
+}
+
+.blue {
+    background: #c9e9f6;
+    color: #39758c;
+}
+
+.brown {
+    background: #e5d0bd;
+    color: #795548;
+}
+
+.pink {
+    background: #f7d6e5;
+    color: #9b5575;
+}
+
+.gray {
+    background: #dedede;
+    color: #666666;
+}
+   .yellow-button {
+    background: #fff3b0;
+    color: #8a7415;
+}
+
+.blue-button {
+    background: #c9e9f6;
+    color: #39758c;
+}
+
+.brown-button {
+    background: #e5d0bd;
+    color: #795548;
+}
+
+.pink-button {
+    background: #f7d6e5;
+    color: #9b5575;
+}
+
+.gray-button {
+    background: #dedede;
+    color: #666666;
 }
