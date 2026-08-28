@@ -957,3 +957,100 @@ body.dark-mode .close-modal {
     background: #d7d7d7 !important;
     color: #5f5f5f !important;
 }
+/* ========================================
+   📸 ГАЛЕРЕЯ КОТОМЕНТОВ
+   ======================================== */
+
+.gallery-section {
+    padding: 70px 7%;
+}
+
+.gallery {
+    max-width: 1200px;
+    margin: 40px auto 0;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+
+    border-radius: 24px;
+    background: white;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.10);
+
+    cursor: pointer;
+
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.16);
+}
+
+.gallery-item img {
+    display: block;
+
+    width: 100%;
+    height: 300px;
+
+    object-fit: cover;
+
+    transition: transform 0.4s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+.gallery-caption {
+    padding: 16px;
+
+    text-align: center;
+
+    font-size: 18px;
+    font-weight: 700;
+
+    background: white;
+}
+
+
+/* 🌙 ТЁМНАЯ ТЕМА */
+
+body.dark-mode .gallery-item {
+    background: #292332;
+}
+
+body.dark-mode .gallery-caption {
+    background: #292332;
+    color: #f5edf8;
+}
+
+
+/* 📱 ТЕЛЕФОН */
+
+@media (max-width: 800px) {
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 550px) {
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-item img {
+        height: 280px;
+    }
+
+}
