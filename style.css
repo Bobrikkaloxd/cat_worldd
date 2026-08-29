@@ -959,27 +959,33 @@ body.dark-mode .close-modal {
 }
 /* ========================================
    📸 ГАЛЕРЕЯ КОТОМЕНТОВ
-   ======================================== */
+======================================== */
 
 .gallery-section {
+    width: 100%;
     padding: 70px 7%;
+    box-sizing: border-box;
 }
 
 .gallery {
+    width: 100%;
     max-width: 1100px;
     margin: 40px auto;
 
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 25px;
-    padding: 0 20px;
+
+    box-sizing: border-box;
 }
 
 .gallery-item {
-    position: relative;
-    overflow: hidden;
+    width: 100%;
+    min-width: 0;
 
+    overflow: hidden;
     border-radius: 24px;
+
     background: white;
 
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.10);
@@ -997,8 +1003,10 @@ body.dark-mode .close-modal {
 
 .gallery-item img {
     display: block;
+
     width: 100%;
     height: 260px;
+
     object-fit: cover;
 
     transition: transform 0.4s ease;
@@ -1032,7 +1040,7 @@ body.dark-mode .gallery-caption {
 }
 
 
-/* 📱 ТЕЛЕФОН */
+/* 📱 ПЛАНШЕТ */
 
 @media (max-width: 800px) {
 
@@ -1041,6 +1049,9 @@ body.dark-mode .gallery-caption {
     }
 
 }
+
+
+/* 📱 ТЕЛЕФОН */
 
 @media (max-width: 550px) {
 
@@ -1052,99 +1063,4 @@ body.dark-mode .gallery-caption {
         height: 280px;
     }
 
-}
-/* 📸 ГАЛЕРЕЯ — исправление размера */
-
-.gallery-section {
-    width: 100%;
-    box-sizing: border-box;
-}
-
-.gallery {
-    width: 100%;
-    max-width: 1100px;
-    margin: 40px auto;
-
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 25px;
-
-    padding: 0 20px;
-    box-sizing: border-box;
-}
-
-.gallery-item {
-    width: 100%;
-    min-width: 0;
-    overflow: hidden;
-
-    border-radius: 24px;
-}
-
-.gallery-item img {
-    display: block;
-
-    width: 100%;
-    height: 260px;
-
-    object-fit: cover;
-}
-/* 📸 КРАСИВАЯ СЕТКА ГАЛЕРЕИ */
-
-.gallery {
-    width: 100%;
-    max-width: 1200px;
-    margin: 40px auto;
-    padding: 0 20px;
-
-    display: grid !important;
-    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
-    gap: 25px;
-    box-sizing: border-box;
-}
-
-.gallery-item {
-    width: auto !important;
-    min-width: 0 !important;
-    overflow: hidden;
-    border-radius: 24px;
-    background: white;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-}
-
-.gallery-item img {
-    display: block;
-    width: 100% !important;
-    height: 280px !important;
-    object-fit: cover;
-}
-
-/* подпись под фотографией */
-.gallery-caption {
-    padding: 14px 18px;
-    font-size: 18px;
-    font-weight: 600;
-}
-
-/* 🌙 Тёмная тема */
-body.dark-mode .gallery-item {
-    background: #292332;
-}
-
-/* 📱 Планшет */
-@media (max-width: 900px) {
-    .gallery {
-        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-    }
-}
-
-/* 📱 Телефон */
-@media (max-width: 550px) {
-    .gallery {
-        grid-template-columns: 1fr !important;
-    }
-
-    .gallery-item img {
-        height: 250px !important;
-    }
 }
