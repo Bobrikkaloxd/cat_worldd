@@ -968,82 +968,75 @@ body.dark-mode .close-modal {
 }
 
 .gallery {
-    width: 100%;
     max-width: 1100px;
     margin: 40px auto;
 
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 25px;
-
-    box-sizing: border-box;
 }
 
 .gallery-item {
-    position: relative;
+    display: block;
     width: 100%;
+
     overflow: hidden;
-
     border-radius: 24px;
+
     background: white;
+    box-shadow: 0 10px 30px rgba(120, 80, 110, 0.10);
 
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.10);
-
-    cursor: pointer;
-
-    transition: transform 0.3s ease,
-                box-shadow 0.3s ease;
+    transition: transform 0.25s ease,
+                box-shadow 0.25s ease;
 }
 
 .gallery-item:hover {
     transform: translateY(-7px);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.16);
+    box-shadow: 0 20px 45px rgba(120, 80, 110, 0.16);
 }
 
 .gallery-item img {
     display: block;
+
     width: 100%;
     height: 260px;
 
     object-fit: cover;
-
-    transition: transform 0.4s ease;
-}
-
-.gallery-item:hover img {
-    transform: scale(1.05);
 }
 
 .gallery-caption {
+    display: block;
+
     padding: 16px;
 
     text-align: center;
 
+    background: white;
+    color: #493b49;
+
     font-size: 18px;
     font-weight: 700;
-
-    background: white;
 }
 
 
 /* 🌙 ТЁМНАЯ ТЕМА */
 
 body.dark-mode .gallery-item {
-    background: #292332;
+    background: #302833;
 }
 
 body.dark-mode .gallery-caption {
-    background: #292332;
-    color: #f5edf8;
+    background: #302833;
+    color: #f4eaf2;
 }
 
 
 /* 📱 ПЛАНШЕТ */
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
 
     .gallery {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
 }
@@ -1051,7 +1044,7 @@ body.dark-mode .gallery-caption {
 
 /* 📱 ТЕЛЕФОН */
 
-@media (max-width: 550px) {
+@media (max-width: 600px) {
 
     .gallery {
         grid-template-columns: 1fr;
