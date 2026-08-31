@@ -3,7 +3,7 @@ const cats = [
         name: "Гордюша 🤍",
         image: "gordyusha.jpg",
         description: "Главный пушистый житель Котополиса. Любит уют, внимание и хорошие места для сна.",
-        fullDescription: "Гордюша — главный пушистый житель Котополиса. Любит уют, внимание и хорошие места для сна. Изящный белый шотландец, добрый и никогда не кусается. его день рождение 8 ноября, порода - Шотландец. Гордон не активный котик, так что чаще всего его можно найти спящим. раньше он обожал играть с Симбой. Гордюшина привычка рано будить своих хозяев, что бы попросить лакомство 💖"
+        fullDescription: "Гордюша — главный пушистый житель Котополиса. Любит уют, внимание и хорошие места для сна. Изящный белый шотландец, добрый и никогда не кусается. его день рождение 8 октября, порода - Шотландец. Гордон не активный котик, так что чаще всего его можно найти спящим. раньше он обожал играть с Симбой. Гордюшина привычка рано будить своих хозяев, что бы попросить лакомство 💖"
     },
     {
         name: "Симба 🧡",
@@ -344,3 +344,71 @@ photoViewer.addEventListener("wheel", (event) => {
     viewerImage.style.transform = `scale(${zoomLevel})`;
 
 }, { passive: false });
+
+// ========================================
+// 🔍 ПРОСМОТР ФОТО В ГАЛЕРЕЕ
+// ========================================
+
+const photoModal = document.getElementById("photoModal");
+const modalImage = document.getElementById("modalImage");
+const modalCaption = document.getElementById("modalCaption");
+const photoClose = document.getElementById("photoClose");
+
+const galleryCards = document.querySelectorAll(".cat-gallery-card");
+
+galleryCards.forEach(card => {
+
+    card.addEventListener("click", () => {
+
+        const image = card.querySelector("img");
+        const caption = card.querySelector(".cat-gallery-caption");
+
+        modalImage.src = image.src;
+        modalImage.alt = image.alt;
+
+        if (caption) {
+            modalCaption.textContent = caption.textContent.trim();
+        }
+
+        photoModal.classList.add("active");
+
+        document.body.style.overflow = "hidden";
+    });
+
+});
+
+// Закрытие крестиком
+
+photoClose.addEventListener("click", () => {
+
+    photoModal.classList.remove("active");
+
+    document.body.style.overflow = "";
+
+});
+
+// Закрытие по клику на тёмный фон
+
+photoModal.addEventListener("click", (event) => {
+
+    if (event.target === photoModal) {
+
+        photoModal.classList.remove("active");
+
+        document.body.style.overflow = "";
+    }
+
+});
+
+// Закрытие клавишей ESC
+
+document.addEventListener("keydown", (event) => {
+
+    if (event.key === "Escape") {
+
+        photoModal.classList.remove("active");
+
+        document.body.style.overflow = "";
+    }
+
+});
