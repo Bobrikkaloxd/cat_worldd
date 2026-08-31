@@ -254,3 +254,93 @@ if (closeEasterEgg && easterEgg) {
 
     });
 }
+
+/* ========================================
+   🔍 ПРОСМОТР И ПРИБЛИЖЕНИЕ ФОТО
+   ======================================== */
+
+const photoViewer = document.getElementById("photoViewer");
+const viewerImage = document.getElementById("viewerImage");
+const viewerClose = document.getElementById("viewerClose");
+
+let zoomLevel = 1;
+
+
+/* 📸 Открываем фотографию */
+
+document.querySelectorAll(".cat-gallery-card img, .gallery-item img")
+    .forEach(img => {
+
+        img.addEventListener("click", () => {
+
+            viewerImage.src = img.src;
+            viewerImage.alt = img.alt;
+
+            zoomLevel = 1;
+            viewerImage.style.transform = "scale(1)";
+
+            photoViewer.classList.add("active");
+
+            document.body.style.overflow = "hidden";
+        });
+
+    });
+
+
+/* ❌ Закрываем */
+
+function closePhotoViewer() {
+
+    photoViewer.classList.remove("active");
+
+    document.body.style.overflow = "";
+
+    zoomLevel = 1;
+    viewerImage.style.transform = "scale(1)";
+}
+
+
+/* Кнопка X */
+
+viewerClose.addEventListener("click", closePhotoViewer);
+
+
+/* Клик по тёмному фону */
+
+photoViewer.addEventListener("click", (event) => {
+
+    if (event.target === photoViewer) {
+        closePhotoViewer();
+    }
+
+});
+
+
+/* ⌨️ ESC */
+
+document.addEventListener("keydown", (event) => {
+
+    if (event.key === "Escape") {
+        closePhotoViewer();
+    }
+
+});
+
+
+/* 🖱️ КОЛЁСИКО — ZOOM */
+
+photoViewer.addEventListener("wheel", (event) => {
+
+    event.preventDefault();
+
+    if (event.deltaY < 0) {
+        zoomLevel += 0.15;
+    } else {
+        zoomLevel -= 0.15;
+    }
+
+    zoomLevel = Math.max(1, Math.min(4, zoomLevel));
+
+    viewerImage.style.transform = `scale(${zoomLevel})`;
+
+}, { passive: false });
