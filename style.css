@@ -1193,3 +1193,67 @@ body.dark-mode .gallery-caption {
         bottom: 15px;
     }
 }
+/* ========================================
+   🔍 УВЕЛИЧЕНИЕ ФОТО
+   ======================================== */
+
+.cat-gallery-grid img {
+    cursor: zoom-in;
+}
+
+/* затемнение фона */
+
+.photo-overlay {
+    position: fixed;
+    inset: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    background: rgba(20, 15, 22, 0.82);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px;
+    box-sizing: border-box;
+
+    z-index: 99999;
+
+    opacity: 0;
+
+    transition: opacity 0.25s ease;
+
+    cursor: zoom-out;
+}
+
+.photo-overlay.show {
+    opacity: 1;
+}
+
+/* увеличенная фотография */
+
+.photo-overlay img {
+    display: block;
+
+    max-width: 90vw;
+    max-height: 90vh;
+
+    width: auto;
+    height: auto;
+
+    object-fit: contain;
+
+    border-radius: 20px;
+
+    box-shadow: 0 20px 70px rgba(0, 0, 0, 0.45);
+
+    transform: scale(0.85);
+
+    transition: transform 0.25s ease;
+}
+
+.photo-overlay.show img {
+    transform: scale(1);
+}
