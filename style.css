@@ -1257,3 +1257,49 @@ body.dark-mode .gallery-caption {
 .photo-overlay.show img {
     transform: scale(1);
 }
+/* ========================================
+   📸 КНОПКА ГАЛЕРЕИ
+   ======================================== */
+
+.gallery-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 16px 24px;
+
+    border-radius: 16px;
+
+    background: #eadff3;
+    color: #79578e;
+
+    font-size: 16px;
+    font-weight: 700;
+
+    text-decoration: none;
+
+    box-shadow: 0 8px 20px rgba(140, 100, 160, 0.12);
+
+    transition: transform 0.2s ease,
+                box-shadow 0.2s ease,
+                background 0.2s ease;
+}
+
+.gallery-button:hover {
+    transform: translateY(-3px);
+
+    background: #e1d2ed;
+
+    box-shadow: 0 12px 25px rgba(140, 100, 160, 0.18);
+}
+
+/* 🌙 Тёмная тема */
+
+body.dark-mode .gallery-button {
+    background: #403548;
+    color: #eadcf1;
+}
+
+body.dark-mode .gallery-button:hover {
+    background: #4b3e52;
+}
