@@ -1173,6 +1173,44 @@
         <p id="modalCaption"></p>
     </div>
 </div>
+
+    <script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const images = document.querySelectorAll(".cat-gallery-grid img");
+
+    images.forEach(function (img) {
+
+        img.addEventListener("click", function () {
+
+            const overlay = document.createElement("div");
+            overlay.className = "photo-overlay";
+
+            const bigImage = document.createElement("img");
+            bigImage.src = img.src;
+            bigImage.alt = img.alt;
+
+            overlay.appendChild(bigImage);
+            document.body.appendChild(overlay);
+
+            requestAnimationFrame(function () {
+                overlay.classList.add("show");
+            });
+
+            overlay.addEventListener("click", function () {
+                overlay.classList.remove("show");
+
+                setTimeout(function () {
+                    overlay.remove();
+                }, 250);
+            });
+
+        });
+
+    });
+
+});
+</script>
     
 </body>
 
